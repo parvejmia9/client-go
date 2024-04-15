@@ -88,12 +88,12 @@ func main() {
 		},
 	}
 
-	fmt.Println("Creating deployment...")
+	fmt.Println("Creating Service...")
 	res, err := serviceClients.Create(context.TODO(), service, metav1.CreateOptions{})
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("Created deployment %q.\n", res.GetObjectMeta().GetName())
+	fmt.Printf("Created Service %q.\n", res.GetObjectMeta().GetName())
 
 }
 
